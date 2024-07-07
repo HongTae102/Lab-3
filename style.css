@@ -1,0 +1,150 @@
+/* Default button styles */
+
+.round-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 25px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Change background color on hover */
+
+.round-button:hover {
+    background-color: red;
+}
+
+
+/* Responsive adjustments */
+
+@media (max-width: 600px) {
+    .round-button {
+        border-radius: 0;
+        width: 100%;
+        padding: 15px 0;
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .round-button {
+        padding: 12px 24px;
+        font-size: 17px;
+    }
+}
+
+.container>p {
+    color: red;
+}
+
+.container>div>p {
+    color: initial;
+    /* เพื่อให้ CAMT 2 กลับไปใช้ค่าสีตามปกติ */
+}
+
+.header {
+    grid-area: header;
+}
+
+.menu {
+    grid-area: menu;
+}
+
+.main {
+    grid-area: main;
+}
+
+.left {
+    grid-area: left;
+}
+
+.right {
+    grid-area: right;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 'header header header header header header' 'menu main main main main main' 'menu left left left right right' 'footer footer footer footer footer footer';
+    gap: 10px;
+    background-color: red;
+    padding: 10px;
+}
+
+.grid-container>div {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+.table1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.table1-item {
+    background-color: white;
+    border: 1px solid #000000;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.flex1 {
+    display: flex;
+    background-color: DodgerBlue;
+    flex-direction: row-reverse;
+    .item {
+        background-color: red;
+        margin: 5px;
+        padding: 20px;
+        color: white;
+        text-align: center;
+    }
+}
+
+.flex2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    background-color: DodgerBlue;
+    .item {
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        margin: 5px;
+        text-align: center;
+        line-height: 50px;
+    }
+}
+
+.flex3 {
+    display: flex;
+    flex-wrap: wrap;
+    height: 150px;
+    width: 300px;
+    background-color: DodgerBlue;
+    justify-content: center;
+    /* จัดให้ items อยู่ตรงกลางแนวนอน */
+    align-items: center;
+    /* จัดให้ items อยู่ตรงกลางแนวตั้ง */
+}
+
+.flex3 .item {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    margin: 5px;
+    text-align: center;
+    line-height: 50px;
+}
